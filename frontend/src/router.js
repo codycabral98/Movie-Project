@@ -4,6 +4,8 @@ import About from './views/About'
 import MovieDetail from './views/MovieDetail'
 import Results from './views/Results'
 import Login from './views/Login'
+import Auth from '@/components/Auth'
+import Movies from '@/components/Movies'
 
 Vue.use(Router)
 
@@ -13,8 +15,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: Login
+      name: 'Movies'
+      component: Movies
     },
     {
       path: '/results',
@@ -31,5 +33,8 @@ export default new Router({
       name: 'moviedetail',
       component: MovieDetail
     },
+      path: '/auth',
+      name: 'Auth',
+      component: Auth
   ]
 })
