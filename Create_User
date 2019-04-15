@@ -1,9 +1,8 @@
 from django.contrib.auth.models import User
+user = User.objects.create_user('john', 'lennon@thebeatles.com', 'johnpassword')
 
-# Create user and save to the database
-user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
-
-# Update fields and then save again
-user.first_name = 'John'
-user.last_name = 'Citizen'
+# At this point, user is a User object that has already been saved
+# to the database. You can continue to change its attributes
+# if you want to change other fields.
+user.last_name = 'Lennon'
 user.save()
